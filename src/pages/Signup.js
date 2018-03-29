@@ -10,22 +10,28 @@ class Signup extends Component {
   render() {
     return (
       <div>
-      <Container textAlign='center'>
-      <h1>Signup Form</h1>
-
+      <Container textAlign='center' >
+      <h1>registration Form</h1> </Container>
+<Container style={{width:400}}>
       <Form>
-              <Form.Group widths='equal'>
-                <Form.Input fluid label='First name' placeholder='First name' />
-                <Form.Input fluid label='Last name' placeholder='Last name' />
-                <Form.Select fluid label='Gender' options={options} placeholder='Gender' />
-              </Form.Group>
-              <Form.Button>Submit</Form.Button>
+    <Form.Field>
+      <label>First Name</label>
+      <input placeholder='First Name' />
+    </Form.Field>
+    <Form.Field>
+      <label>Last Name</label>
+      <input placeholder='Last Name' />
+    </Form.Field>
+              <Form.Select fluid label='Gender' options={options} placeholder='Gender' />
+            <Form.Button>Submit</Form.Button> <a href='login'>
+            <Container textAlign='right'>Login  </Container> </a>
+
+
             </Form>
               </Container>
         </div>
     );
   }
-
 }
 
 export default Signup;

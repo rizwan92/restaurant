@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { Container, Button, Checkbox, Form, Divider, Icon} from 'semantic-ui-react'
+import { Container, Button, Form} from 'semantic-ui-react'
 
 class LoginPage extends Component {
 
   render() {
     return (
-      <div>  <Container textAlign='center'>
-      <h1>Registration Form</h1>
+      <div>  <Container textAlign='center' >
+      <h1>Login Form</h1>
     </Container>
-      <Container>
+      <Container style={{width:400}}>
       <Form>
       <Form.Field>
      <label>email id </label>
@@ -18,9 +18,13 @@ class LoginPage extends Component {
   <label>password</label>
   <input type='password' placeholder='password' />
       </Form.Field>
-   <Button primary fluid>Login</Button>
-  <Divider horizontal>Or</Divider>
-  <Button secondary fluid>Sign Up Now</Button>
+   <Button primary fluid style={{width:100}}>Login</Button><a href='Signup'>
+   <Container textAlign='right'>
+      registration
+    </Container>
+ </a>
+
+
      </Form>
       </Container>
  )
