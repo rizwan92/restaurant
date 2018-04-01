@@ -4,7 +4,6 @@ import MainPage from './pages/MainPage';
 import AdminPage from './pages/AdminPage';
 import LoginPage from './pages/LoginPage';
 import Signup from './pages/Signup';
-
 class App extends Component {
 
   render() {
