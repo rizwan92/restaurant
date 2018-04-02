@@ -9,7 +9,7 @@ class LoginForm extends Component {
         <Form>
           <Form.Field>
             <label>email id </label>
-            <input iconPosition='left' Icon name='at' placeholder='email id' />
+            <input  name='at' placeholder='email id' />
           </Form.Field>
           <Form.Field>
             <label>password</label>
