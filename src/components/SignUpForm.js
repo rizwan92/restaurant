@@ -78,7 +78,7 @@ class SignUpForm extends Component {
 export default graphql(AddUser,{
   props:props=>({
     AddUser:user=>props.mutate({
-      variable:user,
+      variable:{...user},
       optimisticResponse:{
 
       }
