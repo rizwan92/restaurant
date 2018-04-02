@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import {Container,Menu, Icon, Modal} from 'semantic-ui-react'
+import {Container,Menu, Icon,  Modal} from 'semantic-ui-react'
 class MyHeader extends Component {
   state={
     modalOpen:false,
