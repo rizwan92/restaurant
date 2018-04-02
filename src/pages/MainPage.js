@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../components/Header';
+import MyHeader from '../components/MyHeader';
 import Footer from '../components/Footer';
 import Body from '../components/Body';
 import { Segment } from 'semantic-ui-react'
@@ -47,7 +47,7 @@ class MainPage extends Component {
   render() {
     return (
       <Segment inverted textAlign='center' vertical style={{padding:0,height:'100vh'}}>
-        <Header />
+        <MyHeader />
         {
           this.state.products.map((product,i)=>{
             return(
