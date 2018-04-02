@@ -4,6 +4,11 @@ import MainPage from './pages/MainPage';
 import AdminPage from './pages/AdminPage';
 import LoginPage from './pages/LoginPage';
 import Signup from './pages/Signup';
+import AWSAppSyncClient from 'aws-appsync';
+import { Rehydrated } from 'aws-appsync-react';
+import { AUTH_TYPE } from 'aws-appsync/lib/link/auth-link';
+import {  ApolloProvider } from 'react-apollo';
+import AppSync from './AppSync';
 class App extends Component {
 
   render() {
@@ -18,4 +23,21 @@ class App extends Component {
   }
 }
 
-export default App;
+const client = new AWSAppSyncClient({
+  url: AppSync.graphqlEndpoint,
+  region: AppSync.region,
+  auth: {
+    type: AUTH_TYPE.API_KEY,
+    apiKey: AppSync.apiKey,
+  }
+});
+
+const WithProvider = () => (
+  <ApolloProvider client={client}>
+    <Rehydrated>
+      <App />
+    </Rehydrated>
+  </ApolloProvider>
+);
+
+export default WithProvider;

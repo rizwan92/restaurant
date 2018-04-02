@@ -4,7 +4,7 @@ import LoginForm from '../components/LoginForm';
 import SignUpForm from '../components/SignUpForm';
 class LoginPage extends Component {
   state ={
-    condition:true
+    condition:false
   }
 
   render() {

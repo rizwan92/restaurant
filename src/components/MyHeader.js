@@ -27,7 +27,7 @@ class MyHeader extends Component {
       <div>
         <Menu style={{height:'50px'}} >
           <Container>
-            <img src="https://image.freepik.com/free-icon/twitter-logo_318-40459.jpg" style={{height:'auto',width:'50px'}} />
+            <img src="https://image.freepik.com/free-icon/twitter-logo_318-40459.jpg" style={{height:'auto',width:'50px'}} alt="icon" />
             <Menu.Item position='right'>
               <Menu.Item as='a' onClick={this.redirect.bind(this,'/')}>Home</Menu.Item>
               <Menu.Item as='a' onClick={this.redirect.bind(this,'/login')}>Log in</Menu.Item>
