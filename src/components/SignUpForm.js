@@ -80,7 +80,7 @@ export default graphql(AddUser,{
     AddUser:user=>props.mutate({
       variable:user,
       optimisticResponse:{
-      
+
       }
     })
   })

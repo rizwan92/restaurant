@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
 export default gql`
-mutation addUser(  $id:String!,$name:String!,$email:String!,$number:String!,$gender:String!,$password:String!,$createdAt:String!,$type:String!){
+mutation ($id:String!,$name:String!,$email:String!,$number:String!,$gender:String!,$password:String!,$createdAt:String!,$type:String!){
   addUser(
     id:$id,
     name:$name,
