@@ -34,7 +34,7 @@ class SignUpForm extends Component {
       type:'admin'
     }
     console.log(user);
-    this.props.AddUser(user)
+    this.props.AddUser(user);
 
   }
 
@@ -77,11 +77,13 @@ class SignUpForm extends Component {
 
 export default graphql(AddUser,{
   props:props=>({
-    AddUser:user=>props.mutate({
-      variable:user,
-      optimisticResponse:{
-
-      }
-    })
+    AddUser: user => {
+      console.log("--USER", user);
+      console.log("--props", props);
+      return props.mutate({
+        variables:user,
+        optimisticResponse:{}
+      })
+    }
   })
 })(SignUpForm);
