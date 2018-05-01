@@ -12,12 +12,6 @@ mutation ($name:String!,$email:String!,$number:String!,$gender:String!,$password
 		type:$type
   ){
     id
-    name
-    email
-    number
-    gender
-    password
-    createdAt
     type
   }
 }`;

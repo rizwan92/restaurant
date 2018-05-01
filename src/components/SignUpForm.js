@@ -33,7 +33,6 @@ class SignUpForm extends Component {
       createdAt,
       type:'admin'
     }
-    console.log(user);
     this.props.AddUser(user);
 
   }
@@ -78,12 +77,12 @@ class SignUpForm extends Component {
 export default graphql(AddUser,{
   props:props=>({
     AddUser: user => {
-      console.log("--USER", user);
-      console.log("--props", props);
       return props.mutate({
         variables:user,
-        optimisticResponse:{}
-      })
+        optimisticResponse: () => ({
+          result:user
+        })
+      }).then(res => console.log(res.data.result))
     }
   })
 })(SignUpForm);
